@@ -4,6 +4,6 @@ Uses class to store each user information(name,personal details,card information
 simulate the process of booking tickets.
 
 
-YOU ARE OUT!
+### YOU ARE OUT!
   -It's an cpp program which simulates the hand cricket game.
   
