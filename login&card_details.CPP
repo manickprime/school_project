@@ -49,9 +49,11 @@ void Customer::validate()
 {
     char uname[10], pword[10];
     cout << "enter name: " << endl;
-    gets(uname);
+    cin>>uname;
     cout << "enter password: " << endl;
-    gets(pword);
+    cin>>pword;
+    cout<<uname;
+    cout<<pword;
     fstream myfile("custy.txt",ios::in|ios::out);
     if (myfile)
     {
@@ -59,6 +61,9 @@ void Customer::validate()
     {
     myfile>>cust_username;
     myfile>>cust_password;
+    cout<<"New record:\n";
+    cout<<cust_username<<"\n";
+    cout<<cust_password<<"\n";
     if(!strcmp(uname,cust_username))
     {
 	if(!strcmp(pword,cust_password))
@@ -77,12 +82,12 @@ void Customer::validate()
 		char q[16];
 		for(int n=0;n<16;n++)
 		atm[n]='*';
-		cout<<"ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»";
-		cout<<"\nº                       º";
-		cout<<"\nº  **** **** **** ****  º";
-		cout<<"\nº                       º";
-		cout<<"\nºÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜº";
-		cout<<"\nÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼";
+		cout<<"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»";
+		cout<<"\nï¿½                       ï¿½";
+		cout<<"\nï¿½  **** **** **** ****  ï¿½";
+		cout<<"\nï¿½                       ï¿½";
+		cout<<"\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Üº";
+		cout<<"\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼";
 		delay(100);
 		cout<<"\n\nLooks like u need to enter your card details for payment options";delay(100);
 		cout<<"\nNo problem,u can do it now";delay(100);
@@ -92,19 +97,19 @@ void Customer::validate()
 		{
 		  atm[n]=getch();
 		  clrscr();
-		  cout<<"ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»";
-		  cout<<"\nº                       º";
-		  cout<<"\nº  ";
+		  cout<<"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»";
+		  cout<<"\nï¿½                       ï¿½";
+		  cout<<"\nï¿½  ";
 		  for(int i=0;i<16;i++)
 		  {
 		      if((i!=0)&&(i%4==0))
 		      cout<<" ";
 		      cout<<atm[i];
 		  }
-		 cout<<"  º";
-		 cout<<"\nº                       º";
-		 cout<<"\nºÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜº";
-		 cout<<"\nÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼";
+		 cout<<"  ï¿½";
+		 cout<<"\nï¿½                       ï¿½";
+		 cout<<"\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Üº";
+		 cout<<"\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼";
 		 if(n==15)
 		 {
 		    char f;
@@ -125,9 +130,9 @@ void Customer::validate()
     {
 
      q[w]='*';
-	cout<<"ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»";
-     cout<<"\nº                       º";
-     cout<<"\nº  ";
+	cout<<"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»";
+     cout<<"\nï¿½                       ï¿½";
+     cout<<"\nï¿½  ";
      for(int i=0;i<16;i++)
      {
       if((i!=0)&&(i%4==0))
@@ -137,10 +142,10 @@ void Customer::validate()
       else
 	 cout<<atm[i];
      }
-     cout<<"  º";
-     cout<<"\nº                       º";
-     cout<<"\nºÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜº";
-     cout<<"\nÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼";
+     cout<<"  ï¿½";
+     cout<<"\nï¿½                       ï¿½";
+     cout<<"\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Üº";
+     cout<<"\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼";
      if(w<12)
      {
       if(w%4!=0)
